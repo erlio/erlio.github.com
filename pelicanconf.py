@@ -25,6 +25,8 @@ LINKS =  (('Pelican', 'http://getpelican.com/'),
 SOCIAL = (('You can add links in your config file', '#'),
           ('Another social link', '#'),)
 
+OUTPUT_PATH = '.'
+
 DEFAULT_PAGINATION = 10
 
 THEME = './erlio_theme'

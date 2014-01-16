@@ -1,0 +1,198 @@
+{% extends "base.html" %}
+{% block extra_js %}
+<script src="/theme/js/libs/jquery.scrollTo-min.js"></script>
+<script src="/theme/js/script.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script>
+mapInit();
+</script>
+{% endblock %}
+{% block content %}
+<section id="promo" class="section alt" style="background-image:url(/theme/img/bg_alpes.jpg);background-size:100%;background-repeat:no-repeat;">
+    <div class="container">
+        <div id="myCarousel" class="carousel slide">
+            <!-- Carousel items -->
+            <div class="carousel-inner">
+                <div class="active item">
+                    <div class="row-fluid">
+                        <div class="span10">
+                            <div class="hero-unit">
+                                <h1>The right mix of technology is the key to be one step ahead of your competitors</h1>
+                                <p>Hardware dies and software fails. How do you react and adapt in case of failures?<br />The answer lies within your technology mix. Let us help defining your mix!</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row-fluid">
+                        <div class="span4">
+                            <div class="well">
+                                <h3>
+                                    Strategy & Consulting
+                                </h3>
+                                <p>
+                                We love to share the knowledge and experiences we gained in the fields of software engineering and system architectures.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="span4">
+                            <div class="well">
+                                <h3>
+                                    Development & Operations
+                                </h3>
+                                <p>
+                                Concurrent technologies and distributed architectures can outperform traditional approaches in a lot of cases – in terms of development speed, hardware costs, and return on investment.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="span4">
+                            <div class="well">
+                                <h3>
+                                    Own Products
+                                </h3>
+                                <p>
+                                The cloud! Everyone's moving towards it. We provide our own cloud services too. You might have heard of our first product: <a href="http://www.tambur.io">Tambur.io</a>.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="aboutus" class="section">
+    <div class="container">
+        <div class="page-header">
+            <h1>
+                Who are we? <small>Geeks and technology enthusiasts with a strong connection to business</small>
+            </h1>
+        </div>
+        <ul class="thumbnails bordered thumbnail-list">
+            <li class="span4">
+            <figure class="thumbnail-figure">
+                <img src="/theme/img/fatton.jpg" alt="">
+                <figcaption class="thumbnail-title">
+                <h3><span>André Fatton</span></h3>
+                <p><span>Co-Founder and CEO</span></p>
+                </figcaption>
+            </figure>
+            <p>
+            Born in Biel/Bienne, university education in mathematics and computer science, degree in philosophy and music. Non academic and down to earth, I'm interested in people and their ideas above all. Interested in small, big and open data, and functional programming. Worked in databases, system administration, the music business and journalism.
+            </p>
+            <i class="icon-twitter"></i><a href="http://twitter.com/frescosecco/" target="_blank">@frescosecco</a>
+
+            </li>
+            <li class="span4">
+            <figure class="thumbnail-figure">
+                <img src="/theme/img/graf.jpg" alt="">
+                <figcaption class="thumbnail-title">
+                <h3><span>André Graf</span></h3>
+                <p><span>Co-Founder and CTO</span></p>
+                </figcaption>
+            </figure>
+            <p>
+            My career started as a business guy always being curious about the internals of computers and software. Soon after graduating commercial college I switched sectors and started to study computer science. Besides of owning a company I am interested in distributed systems research, programming languages, live concerts, and surfing.
+            </p>
+            <i class="icon-twitter"></i><a href="http://twitter.com/der_graf/" target="_blank">@der_graf</a><br />
+            </li>
+            <li class="span4">
+            <figure class="thumbnail-figure">
+                <img src="/theme/img/you.jpg" alt="">
+                <figcaption class="thumbnail-title">
+                <h3><span>Partner</span></h3>
+                </figcaption>
+            </figure>
+            <p>
+            Are you interested in a strategic partnership with Erlio GmbH? Do you think we can combine our efforts? Please let us know!
+            </p>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section id="whatwedo" class="section alt">
+    <div class="container">
+        <div class="page-header">
+            <h1>
+                What we do? <small>... is untraditional</small>
+            </h1>
+        </div>
+        <div class="row-fluid">
+            <ul class="thumbnails bordered pull-center">
+                <div class="span4">
+                    <h3>
+                        <i class="icon-heart huge-icon"></i>
+                        <span class="blocked">Technology we love</span>
+                    </h3>
+                    <div class="well" style="text-align:left">
+                        <p>We are happy to promote & recommend the technology we love:</p>
+                        <p class="visible-phone">Erlang OTP, Riak, Cassandra, HTML5, Python, Django</p>
+
+                        <div class="row-fluid hidden-phone">
+
+                            <div class="span3"><a href="http://www.erlang.org"><img src="/theme/img/erlang-logo.png"></a></div>
+                            <div class="span5"><a href="http://basho.com/"><img src="/theme/img/riak-logo.png"></a></div>
+                            <div class="span4"><a href="http://cassandra.apache.org/"><img src="/theme/img/cassandra-logo.png"></a></div>
+                        </div>
+                        <br />
+                        <div class="row-fluid hidden-phone">
+                            <div class="span2"><a href="http://www.html5rocks.com/"><img src="/theme/img/html5-logo.png"></a></div>
+                            <div class="span7"><a href="http://python.org/"><img src="/theme/img/python-logo.png"></a></div>
+                            <div class="span3"><a href="https://www.djangoproject.com"><img src="/theme/img/django-logo.png"></a></div>
+                        </div>
+                        <br />
+                        <div class="row-fluid hidden-phone">
+                            <div class="span7"><a href="http://www.rabbitmq.com/"><img src="/theme/img/rabbitmq-logo.png"></a></div>
+                            <div class="span2"></div>
+                            <div class="span3"></div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="span4">
+                    <h3>
+                        <i class="icon-star  huge-icon"></i>
+                        <span class="blocked">Erlang OTP</span>
+                    </h3>
+                    <div class="well">
+                        <p style="text-align:left">
+                        A programming language and runtime environment built at Ericsson and released as open source software. We use Erlang as the main ingredient to build large scale, highly available, reliable, distributed systems. If applied in the proper problem domain it may outperform traditional technologies such as Java and .Net in terms of development costs and time to market. Therefore, it's also well suited for developing prototypes.
+                        </p>
+                    </div>
+                </div>
+                <div class="span4">
+                    <h3>
+                        <i class="icon-cloud huge-icon"></i>
+                        <span class="blocked">API's and Software as a Service</span>
+                    </h3>
+                    <div class="well">
+                        <p style="text-align:left">
+                        APIs are everywhere, and with a reason: they are channels to new markets. Our own products and efforts will focus on APIs wherever we can (API as a Service for open Data, to name an idea).
+                        <br />
+                        <br />
+                        Check out our first product:<br /><a href="http://www.tambur.io"><img style="height:95px" src="/theme/img/tambur_logo.png" alt="tambur.io logo"></a></p>
+                    </div>
+                </div>
+
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="contactus" class="section">
+    <div class="container">
+        <div class="page-header">
+            <h1>
+                Contact us <small></small>
+            </h1>
+        </div>
+    </div>
+    <div class="map-top-shadow"></div>
+    <div id="map"></div>
+    <div class="map-bottom-shadow"></div>
+</section>
+{% endblock %}
+

@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- Main Content -->
+<section id="promo" class="section alt" style="background-image:url(/theme/img/bg_blog.png);background-size:100%;background-repeat:no-repeat;">
+  <div class="container">
+    <div class="hero-unit">
+    </div>
+  </div>
+</section>
+<section id="content" class="section alt">
+    <div class="container">
+        <div class="row-fluid">
+            <div class="span9">
+                <h1>Company Blog</h1>
+                {% block article_content %}
+                    {% for article in articles_page.object_list %}
+                    <article class="blog-post well">
+                        <header class="blog-header">
+                            <h2>{{ article.title }}
+                                <small>
+                                    {% if article.author %} by {{ article.author }}{% endif %} on {{ article.locale_date }}
+                                </small>
+                            </h2>
+                        </header>
+                        <p>{{ article.summary }}</p>
+                        <footer class="blog-footer row-fluid">
+                            <div class="span4 blog-categories">
+                                <i class="icon-pushpin"></i>
+                                <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
+                            </div>
+                            <div class="span4 blog-tags">
+                                <i class="icon-tags"></i>
+                                {% for tag in article.tags %}
+                                <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>,
+                                {% endfor %}
+                            </div>
+                            <div class="span4 blog-more">
+                                <i class="icon-link"></i>
+                                <a href="{{ SITEURL}}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">read more</a>
+                            </div>
+                        </footer>
+                    </article>
+                    {% endfor %}
+                    {% set article_count = articles_page.object_list | length %}
+                    {% if article_count >= DEFAULT_PAGINATION %}
+                        {% include 'pagination.html' %}
+                    {% endif %}
+                {% endblock %}
+            </div>
+            <aside class="span3 sidebar panel">
+                <div class="sidebar-widget">
+                    <h3 class="sidebar-header">{% block content_title %}All articles{% endblock %}</h3>
+                </div>
+                <ul class="unstyled">
+                {% for article in articles_page.object_list %}
+                    <li>
+                        <h4>
+                            <a href="{{ SITEURL}}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a>
+                        </h4>
+                        <p>
+                            <small>
+                                <abbr class="published" title="{{ article.date.isoformat() }}"> {{ article.locale_date }} </abbr>
+                            </small>
+                        </p>
+                    </li>
+                {% endfor %}
+                </ul>
+
+            </aside>
+        </div>
+    </div>
+
+</section><!-- /#content -->
+{% endblock content %}

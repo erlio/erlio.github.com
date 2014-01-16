@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = u'Erlio GmbH'
 SITENAME = u'Erlio GmbH'
-SITEURL = ''
+SITEURL = 'http://erl.io'
 
 TIMEZONE = 'Europe/Paris'
 
@@ -29,7 +29,7 @@ DEFAULT_PAGINATION = 10
 
 THEME = './erlio_theme'
 
-MENUITEMS = (('Blog', 'blog.html'),)
+#MENUITEMS = (('Blog', 'blog.html'),)
 DIRECT_TEMPLATES = (('index'),)
 INDEX_SAVE_AS = 'blog.html'
 

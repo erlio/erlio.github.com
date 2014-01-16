@@ -93,13 +93,13 @@
                     <div id="index-nav" class="nav-collapse">
                         <ul id="mainnav" class="nav pull-right">
                             <li>
-                            <a class="static" href="{{ SITEURL }}/#aboutus">Who are we</a>
+                            <a class="static" href="/#aboutus">Who are we</a>
                             </li>
                             <li>
-                            <a class="static" href="{{ SITEURL }}/#whatwedo">What we do</a>
+                            <a class="static" href="/#whatwedo">What we do</a>
                             </li>
                             <li>
-                            <a class="static" href="{{ SITEURL }}/#contactus">Contact us</a>
+                            <a class="static" href="/#contactus">Contact us</a>
                             </li>
                             {% for title, link in MENUITEMS %}
                                 <li{% if p == page %} class="active"{% endif %}><a href="{{ link }}">{{ title }}</a></li>
@@ -141,7 +141,7 @@
                             <li>
                                 <p>
                                     <i class="icon-rss"></i>
-                                    <a href="{{ SITEURL}}/feeds/atom.xml" target="_blank">atom feed</a>
+                                    <a href="/feeds/atom.xml" target="_blank">atom feed</a>
                                 </p>
                             </li>
                             <li>

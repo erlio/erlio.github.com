@@ -26,17 +26,17 @@
                         <footer class="blog-footer row-fluid">
                             <div class="span4 blog-categories">
                                 <i class="icon-pushpin"></i>
-                                <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
+                                <a href="/{{ article.category.url }}">{{ article.category }}</a>
                             </div>
                             <div class="span4 blog-tags">
                                 <i class="icon-tags"></i>
                                 {% for tag in article.tags %}
-                                <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>,
+                                <a href="/{{ tag.url }}">{{ tag }}</a>,
                                 {% endfor %}
                             </div>
                             <div class="span4 blog-more">
                                 <i class="icon-link"></i>
-                                <a href="{{ SITEURL}}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">read more</a>
+                                <a href="/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">read more</a>
                             </div>
                         </footer>
                     </article>
@@ -55,7 +55,7 @@
                 {% for article in articles_page.object_list %}
                     <li>
                         <h4>
-                            <a href="{{ SITEURL}}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a>
+                            <a href="/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a>
                         </h4>
                         <p>
                             <small>

@@ -6,11 +6,13 @@
 
     // Portfolio filters function
     portfolioFilters();
-    $('#mainnav li a ').bind('click', function(e) {
+    $('#mainnav li a, a.scrollto').bind('click', function(e) {
             target = this.hash;
             if (target !== '') {
                 e.preventDefault();
                 $.scrollTo(target, 1000, {'offset': {'top': -80}});
+                // lets push the local link click to google analytics
+                _gaq.push(['inbound_link', 'click', 'scrollto', target, 1, true]);
             }
        });
 })();
